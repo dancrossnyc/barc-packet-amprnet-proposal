@@ -256,6 +256,42 @@ widely with the club.
 * Copies of configuration files, and so forth, will be kept in a
   `git` repository using the Club's github organization
 
+# Opportunities for future expansion
+
+## Additional RF packet interfaces
+
+The proposed infrastructure will be initially provisioned with a
+single RF packet node on 145.090 MHz, but there's no structural
+reason the infrastructure couldn't support multiple nodes on
+different bands.  Each additional interface would require access
+to a suitable radio, antenna, transmission line, and TNC, though
+it may be possible to multiplex antennas based on bands.
+
+Candidates for packet expansion include supporting 1.25m and
+70cm.  These could operate at higher speeds, or use different
+link-layer protocols (e.g., the "Improved Layer 2 Protocol",
+IL2P, which supports forward error correction and more
+efficient data representation than traditional AX.25).
+
+The Raspberry Pi 5 has 4 USB interfaces to connect to TNCs, but
+this could be expanded by means of a dedicated USB hub should
+more devices be desired.
+
+## APRS Digipeater
+
+Similarly, the infrastructure could support APRS on 144.390 MHz,
+providing a digipeater similar to MIT's.
+
+## Additional AMPRNet services
+
+The existing hardware could support additional AMPRNet services,
+as well.  A web server could be installed, for instance, and
+configured to interface with the packet node.  The club could
+configure IP over AX.25, for example, or set up a VPN to the
+to access the W1BOS DMR repeater.
+
+Similarly, the club could support AX.25 over IP.
+
 # Appendix 1: Graphical Representation of Network
 
 ```
